@@ -54,14 +54,30 @@
 		71A0AE911F88011900393327 /* FirstAfternoonDemon */ = {
 			isa = PBXGroup;
 			children = (
-				71A0AE921F88011900393327 /* AppDelegate.swift */,
-				71A0AE941F88011900393327 /* ViewController.swift */,
+				71A0AEA71F8812A400393327 /* Controller */,
 				71A0AE961F88011A00393327 /* Main.storyboard */,
 				71A0AE991F88011A00393327 /* Assets.xcassets */,
 				71A0AE9B1F88011A00393327 /* LaunchScreen.storyboard */,
-				71A0AE9E1F88011A00393327 /* Info.plist */,
+				71A0AEA61F88124A00393327 /* Settings */,
 			);
 			path = FirstAfternoonDemon;
+			sourceTree = "<group>";
+		};
+		71A0AEA61F88124A00393327 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				71A0AE9E1F88011A00393327 /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		71A0AEA71F8812A400393327 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				71A0AE921F88011900393327 /* AppDelegate.swift */,
+				71A0AE941F88011900393327 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FirstAfternoonDemon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FirstAfternoonDemon/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.FirstAfternoonDemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FirstAfternoonDemon/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FirstAfternoonDemon/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.FirstAfternoonDemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
