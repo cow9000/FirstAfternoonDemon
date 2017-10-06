@@ -25,13 +25,16 @@
                                     <color key="titleColor" red="0.18009021664902425" green="0.65896211139896366" blue="0.2980157614388107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="firstMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTg-CE-vYE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="firstButton" destination="CMk-6R-aex" id="wSe-xg-Dv9"/>
+                        <outlet property="firstButton" destination="CMk-6R-aex" id="F1D-81-gqT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
