@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMk-6R-aex">
-                                <rect key="frame" x="136" y="489" width="102" height="30"/>
+                                <rect key="frame" x="136" y="489" width="102" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                 <state key="normal" title="Click here">
@@ -43,6 +43,14 @@
                                     <action selector="changeAlphaOfBackground:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bo2-mm-osX"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-jR-wct">
+                                <rect key="frame" x="145" y="617" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next Screen"/>
+                                <connections>
+                                    <segue destination="Msz-W2-vdQ" kind="show" id="jfr-26-8zQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -63,13 +71,23 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--Second Screen Controller-->
         <scene sceneID="1rp-So-axO">
             <objects>
-                <viewController id="Msz-W2-vdQ" sceneMemberID="viewController">
+                <viewController id="Msz-W2-vdQ" customClass="SecondScreenController" customModule="FirstAfternoonDemon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uJQ-In-Vhs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfv-Bp-sEC">
+                                <rect key="frame" x="142" y="617" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Other Screen"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="7KP-sK-SA3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="I4k-VF-Jng"/>
                     </view>
