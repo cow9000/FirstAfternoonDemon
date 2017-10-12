@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var pageChanger: UIPageControl!
+    @IBOutlet var pageChangeControl: UISwipeGestureRecognizer!
     @IBOutlet weak var alphaSlider: UISlider!
     @IBOutlet weak var ColorLabel: UILabel!
     @IBOutlet weak var firstButton: UIButton!
@@ -37,13 +37,15 @@ class ViewController: UIViewController {
         return newColor
     }
     
-    @IBAction func whenChange(_ sender: UISlider) {
-        
-        ColorLabel.text = "Stupid donkeys"
+    @IBAction func changeAlphaOfBackground(_ sender: UISlider) {
+        view.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat(alphaSlider.value))
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
