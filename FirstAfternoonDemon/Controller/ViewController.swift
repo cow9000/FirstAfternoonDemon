@@ -8,7 +8,10 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+    
+
     
     @IBOutlet var pageChangeControl: UISwipeGestureRecognizer!
     @IBOutlet weak var alphaSlider: UISlider!
@@ -39,6 +42,8 @@ class ViewController: UIViewController {
     
     @IBAction func changeAlphaOfBackground(_ sender: UISlider) {
         view.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat(alphaSlider.value))
+        
+        
     }
     
     
