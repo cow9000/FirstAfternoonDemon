@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMk-6R-aex">
-                                <rect key="frame" x="136" y="318" width="102" height="30"/>
+                                <rect key="frame" x="136" y="489" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                 <state key="normal" title="Click here">
@@ -29,15 +29,45 @@
                                     <action selector="firstMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTg-CE-vYE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Changer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc3-JC-PX6">
+                                <rect key="frame" x="132" y="20" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dJr-bh-QFd">
+                                <rect key="frame" x="80" y="570" width="214" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9Gd-x4-lf8">
+                                <rect key="frame" x="100" y="617" width="175" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.18009021659999999" green="0.65896211140000005" blue="0.29801576140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="whenChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="FBl-GL-zSf"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aNV-VJ-CxL" appends="YES" id="8Ee-Ln-LBF"/>
+                            <outletCollection property="gestureRecognizers" destination="mu2-fo-MbR" appends="YES" id="jst-Jj-2kD"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="ColorLabel" destination="Lc3-JC-PX6" id="U1M-Pr-PwV"/>
+                        <outlet property="alphaSlider" destination="dJr-bh-QFd" id="rtc-bD-iTn"/>
                         <outlet property="firstButton" destination="CMk-6R-aex" id="F1D-81-gqT"/>
+                        <outlet property="pageChanger" destination="9Gd-x4-lf8" id="mqV-eL-oG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="aNV-VJ-CxL"/>
+                <swipeGestureRecognizer direction="right" id="mu2-fo-MbR"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>

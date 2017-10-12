@@ -10,14 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var pageChanger: UIPageControl!
+    @IBOutlet weak var alphaSlider: UISlider!
+    @IBOutlet weak var ColorLabel: UILabel!
     @IBOutlet weak var firstButton: UIButton!
     @IBAction func firstMethod(_ sender: UIButton) {
-        if(sender.backgroundColor == .orange){
-            sender.backgroundColor = .black
+        let color : UIColor = createRandomColor()
+        if(ColorLabel.textColor == .black){
+            firstButton.backgroundColor = color
+            ColorLabel.textColor = .orange
         }else{
-            sender.backgroundColor = .orange
+            firstButton.backgroundColor = color
+            ColorLabel.textColor = .black
         }
-        view.backgroundColor = createRandomColor()
+        view.backgroundColor = color
     }
     
     private func createRandomColor() -> UIColor{
@@ -26,11 +32,15 @@ class ViewController: UIViewController {
         let greenValue : CGFloat = CGFloat(Double (arc4random_uniform(256))/255.00)
         let blueValue : CGFloat = CGFloat(Double (arc4random_uniform(256))/255.00)
         
-        newColor = UIColor(red:redValue, green:greenValue, blue:blueValue, alpha:CGFloat(1.0))
+        newColor = UIColor(red:redValue, green:greenValue, blue:blueValue, alpha:CGFloat(alphaSlider.value))
         
         return newColor
     }
     
+    @IBAction func whenChange(_ sender: UISlider) {
+        
+        ColorLabel.text = "Stupid donkeys"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
