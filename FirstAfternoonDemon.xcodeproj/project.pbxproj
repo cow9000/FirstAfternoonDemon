@@ -14,6 +14,7 @@
 		71A0AE981F88011A00393327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71A0AE961F88011A00393327 /* Main.storyboard */; };
 		71A0AE9A1F88011A00393327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A0AE991F88011A00393327 /* Assets.xcassets */; };
 		71A0AE9D1F88011A00393327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71A0AE9B1F88011A00393327 /* LaunchScreen.storyboard */; };
+		71AE05E11F9539F30033DCC2 /* ThirdScreenControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE05E01F9539F30033DCC2 /* ThirdScreenControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		71A0AE991F88011A00393327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71A0AE9C1F88011A00393327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71A0AE9E1F88011A00393327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71AE05E01F9539F30033DCC2 /* ThirdScreenControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenControllerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				71A0AE921F88011900393327 /* AppDelegate.swift */,
 				71A0AE941F88011900393327 /* ViewController.swift */,
 				715820E91F8FF53800141559 /* SecondScreenController.swift */,
+				71AE05E01F9539F30033DCC2 /* ThirdScreenControllerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				71A0AE951F88011900393327 /* ViewController.swift in Sources */,
 				71A0AE931F88011900393327 /* AppDelegate.swift in Sources */,
+				71AE05E11F9539F30033DCC2 /* ThirdScreenControllerViewController.swift in Sources */,
 				715820EA1F8FF53800141559 /* SecondScreenController.swift in Sources */,
 				715820EF1F8FF9AA00141559 /* ColorTools.swift in Sources */,
 			);

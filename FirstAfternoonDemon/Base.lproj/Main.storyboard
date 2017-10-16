@@ -87,6 +87,14 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="7KP-sK-SA3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTf-4g-BoT">
+                                <rect key="frame" x="122" y="579" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Other other screen"/>
+                                <connections>
+                                    <segue destination="WIa-Ve-t2x" kind="show" id="HBQ-lh-FRL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="I4k-VF-Jng"/>
@@ -95,6 +103,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJn-z3-yST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="118"/>
+        </scene>
+        <!--Third Screen Controller View Controller-->
+        <scene sceneID="IgN-9d-wc2">
+            <objects>
+                <viewController id="WIa-Ve-t2x" customClass="ThirdScreenControllerViewController" customModule="FirstAfternoonDemon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hd5-8K-Kw2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="2wY-N6-DO5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-bW-0Rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402" y="117"/>
         </scene>
     </scenes>
 </document>
