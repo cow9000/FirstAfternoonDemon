@@ -43,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711FA5091F97D31A00C3CDC4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71A0AE991F88011A00393327 /* Assets.xcassets */,
+				71A0AE9E1F88011A00393327 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		715820ED1F8FF99200141559 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,19 +82,10 @@
 				715820ED1F8FF99200141559 /* Model */,
 				71A0AEA71F8812A400393327 /* Controller */,
 				71A0AE961F88011A00393327 /* Main.storyboard */,
-				71A0AE991F88011A00393327 /* Assets.xcassets */,
 				71A0AE9B1F88011A00393327 /* LaunchScreen.storyboard */,
-				71A0AEA61F88124A00393327 /* Settings */,
+				711FA5091F97D31A00C3CDC4 /* Resources */,
 			);
 			path = FirstAfternoonDemon;
-			sourceTree = "<group>";
-		};
-		71A0AEA61F88124A00393327 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				71A0AE9E1F88011A00393327 /* Info.plist */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		71A0AEA71F8812A400393327 /* Controller */ = {
@@ -315,7 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/FirstAfternoonDemon/Settings/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FirstAfternoonDemon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.FirstAfternoonDemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,7 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/FirstAfternoonDemon/Settings/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FirstAfternoonDemon/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.FirstAfternoonDemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";

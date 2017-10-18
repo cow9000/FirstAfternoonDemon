@@ -135,22 +135,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dKJ-jv-s5Q">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="dKJ-jv-s5Q">
                                 <rect key="frame" x="71" y="457" width="233" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="volumeChanged:" destination="HNt-ar-OCT" eventType="valueChanged" id="P5E-T4-7wi"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1U-Zy-ABy">
-                                <rect key="frame" x="73" y="419" width="46" height="30"/>
+                                <rect key="frame" x="41" y="419" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Play/Stop Music"/>
+                                <connections>
+                                    <action selector="playMusicClick:" destination="HNt-ar-OCT" eventType="touchUpInside" id="jeG-gI-sWV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yq-L9-sN1">
-                                <rect key="frame" x="256" y="419" width="46" height="30"/>
+                                <rect key="frame" x="230" y="419" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Change Image"/>
+                                <connections>
+                                    <action selector="imageButtonClick:" destination="HNt-ar-OCT" eventType="touchUpInside" id="4kj-ny-jHg"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGd-f3-di3">
-                                <rect key="frame" x="67" y="180" width="240" height="128"/>
+                                <rect key="frame" x="67" y="184" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -158,10 +167,10 @@
                         <viewLayoutGuide key="safeArea" id="HBI-fY-NZd"/>
                     </view>
                     <connections>
-                        <outlet property="button1" destination="1Yq-L9-sN1" id="NTt-zw-wCv"/>
-                        <outlet property="button2" destination="Q1U-Zy-ABy" id="rIf-wb-gyJ"/>
-                        <outlet property="image" destination="EGd-f3-di3" id="8bK-aQ-onn"/>
-                        <outlet property="slider1" destination="dKJ-jv-s5Q" id="E49-N4-L6b"/>
+                        <outlet property="changeImageButton" destination="1Yq-L9-sN1" id="cLn-QO-Cq4"/>
+                        <outlet property="changeVolume" destination="dKJ-jv-s5Q" id="yFK-NX-mm8"/>
+                        <outlet property="imageContainer" destination="EGd-f3-di3" id="AAs-Ro-vPR"/>
+                        <outlet property="soundButton" destination="Q1U-Zy-ABy" id="D3s-Wf-ssY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkv-SA-BrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
