@@ -22,26 +22,15 @@ class MediaController: UIViewController {
     
     private var defaultImage : String = "image1"
     
-    private var audioPlayer = AVAudioPlayer()
+    private var audioPlayer : AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         imageContainer.image = UIImage(named:defaultImage)
+        loadAudioFile()
         
-        let path : String! = "music"
-        
-        do{
-            if let sound = NSDataAsset(name: path) {
-                try audioPlayer = AVAudioPlayer(data: sound.data, fileTypeHint: ".mp3")
-                audioPlayer.play()
-                soundButton.setTitle("Stop Sound", for: .normal)
-
-            }
-        }catch let error{
-            print(error.localizedDescription)
-        }
     }
     
     
@@ -58,7 +47,7 @@ class MediaController: UIViewController {
     
     @IBAction func volumeChanged(_ sender: Any) {
         
-        audioPlayer.setVolume(changeVolume.value, fadeDuration: 0)
+        audioPlayer?.setVolume(changeVolume.value, fadeDuration: 0.01)
         
     }
     
@@ -66,7 +55,24 @@ class MediaController: UIViewController {
         changeMusicState()
     }
     
-    
+    private func loadAudioFile() -> Void{
+        if let soundURL = NSDataAsset(name: "music")
+        {
+            do{
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                try audioPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
+                
+                changeVolume.maximumValue = Float ((audioPlayer?.duration)!)
+                Timer.scheduledTimer(timeInterval:0.2, target: self, selector:(#selector(self.changeMusicState)),userInfo: nil, repeats: true)
+                
+                soundButton.setTitle("Play Sound", for: .normal)
+                
+            }catch{
+                print("Audio File Load Error")
+            }
+        }
+    }
     
     private func changeImage() -> Void{
         if(imageCounter > 2){
@@ -86,15 +92,8 @@ class MediaController: UIViewController {
         
     }
     
-    private func changeMusicState(){
-        if(audioPlayer.isPlaying){
-            audioPlayer.pause()
-            soundButton.setTitle("Play Sound", for: .normal)
-            
-        }else{
-            audioPlayer.play()
-            soundButton.setTitle("Stop Sound", for: .normal)
-        }
+    @objc public func changeMusicState(){
+        changeVolume.value = audioPlayer?.currentTime
     }
     
 
