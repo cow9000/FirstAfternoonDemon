@@ -9,11 +9,11 @@
 import UIKit
 import AVFoundation
 
-class MediaController: UIViewController {
+public class MediaController: UIViewController {
 
     
     @IBOutlet weak var imageContainer: UIImageView!
-    @IBOutlet weak var soundButton: UIButton!
+    @IBOutlet weak var soundButton: UIButton! //! is an unwrapper optional, ? is a wrapped
     @IBOutlet weak var changeImageButton: UIButton!
     @IBOutlet weak var changeVolume: UISlider!
     
@@ -24,7 +24,7 @@ class MediaController: UIViewController {
     
     private var audioPlayer : AVAudioPlayer?
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -34,7 +34,7 @@ class MediaController: UIViewController {
     }
     
     
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -47,7 +47,7 @@ class MediaController: UIViewController {
     
     @IBAction func volumeChanged(_ sender: Any) {
         
-        audioPlayer?.setVolume(changeVolume.value, fadeDuration: 0.01)
+        
         
     }
     
@@ -64,9 +64,9 @@ class MediaController: UIViewController {
                 try audioPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
                 
                 changeVolume.maximumValue = Float ((audioPlayer?.duration)!)
-                Timer.scheduledTimer(timeInterval:0.2, target: self, selector:(#selector(self.changeMusicState)),userInfo: nil, repeats: true)
+                Timer.scheduledTimer(timeInterval:0.2, target: self, selector:(#selector(self.changeSlider)),userInfo: nil, repeats: true)
                 
-                soundButton.setTitle("Play Sound", for: .normal)
+                soundButton.setTitle("Play Music", for: .normal)
                 
             }catch{
                 print("Audio File Load Error")
@@ -92,8 +92,32 @@ class MediaController: UIViewController {
         
     }
     
-    @objc public func changeMusicState(){
-        changeVolume.value = audioPlayer?.currentTime
+    @objc public func changeSlider(){
+        changeVolume.value = Float ((audioPlayer?.currentTime)!)
+    }
+    
+    public func changeMusicState(){
+        
+        /*if((audioPlayer?.isPlaying)!){
+            audioPlayer?.pause()
+            soundButton.setTitle("Play Music", for: .normal)
+        }
+        else{
+            audioPlayer?.play()
+            soundButton.setTitle("Stop Music", for: .normal)
+        }*/
+        
+        if let isPlaying = audioPlayer?.isPlaying{
+            if(isPlaying){
+                audioPlayer?.pause()
+                soundButton.setTitle("Play Music", for: .normal)
+            }else{
+                audioPlayer?.play()
+                soundButton.setTitle("Stop Music", for: .normal)
+            }
+        }
+        
+        
     }
     
 
